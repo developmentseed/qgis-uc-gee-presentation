@@ -1,0 +1,30 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
+{
+    "name": "Node.js",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:16-bullseye",
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {}
+    },
+    "updateContentCommand": "npm install",
+    "postCreateCommand": "",
+    "postAttachCommand": {
+        "server": "npm start -- --host 127.0.0.1"
+    },
+    "customizations": {
+        "codespaces": {
+            "openFiles": [
+                "slides.md"
+            ]
+        }
+    },
+    "portsAttributes": {
+        "8000": {
+            "label": "Application",
+            "onAutoForward": "openPreview"
+        }
+    },
+    "forwardPorts": [
+        8000
+    ]
+}
