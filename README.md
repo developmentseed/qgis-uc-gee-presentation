@@ -1,14 +1,27 @@
-This is a starter point for creating slide decks using [reveal.js](https://revealjs.com) themed to feel a bit more like [big](https://github.com/tmcw/big).
+# QGIS Earth Engine Plugin – QGIS User Conference Slides
 
-The goals here are:
+This repository contains the slide deck for our presentation at the QGIS User Conference, built using [Reveal.js](https://revealjs.com).
 
-- slides that are easy to write (via Markdown)
-- slide decks that are easy to host (via Github Pages)
+## 🗂 Contents
 
-## Editing slides
+- `slides.md` – Main Markdown file with all slides
+- `assets/` – Images, GIFs, and media used in the deck
 
-Edit `slides.md`.
+## 🚀 Usage
 
-## Deployment
+To view the slides locally:
 
-Being that this repo uses a branch named `gh-pages`, GitHub will automatically deploy itself as `https://{your-username}.github.io/{your-branch-name}`.
+```bash
+npm install reveal-md
+npx reveal-md slides.md
+```
+
+To export a static version:
+```
+npx reveal-md slides.md --static
+```
+
+### 📦 Deployment
+
+Slides are auto-deployed via GitHub Pages from the gh-pages branch:
+👉 https://{your-username}.github.io/qgis-uc-gee-presentation
