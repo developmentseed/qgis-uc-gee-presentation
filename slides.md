@@ -1,7 +1,5 @@
 
-Lessons Learned from Building
-
-The Earth Engine Plugin<!-- .element: class="r-fit-text" -->
+GEE Plugin: Lessons Learned<!-- .element: class="r-fit-text" -->
 
 <img src="assets/qgis-icon_anita02.png" alt="QGIS Logo" style="height: 220px;" />
 <img src="assets/earth-engine.svg" alt="Earth Engine Logo" style="height: 200px;" />
@@ -19,15 +17,13 @@ Export data from Earth Engine for your own analysis
 
 ---
 
-Small team working on Earth Observation and Cloud-Native tooling for high-impact projects
+Tools to improve the planet.
 
 <img src="assets/devseed-logo.png" alt="DevSeed Logo" style="height: 220px;" />
 
 ---
 
-The Goal
-
-Bringing Earth Engine to the QGIS ecosystem <!-- .element: class="r-fit-text" -->
+Goal: Bring Earth Engine to QGIS ecosystem <!-- .element: class="r-fit-text" -->
 
 ---
 
@@ -54,42 +50,74 @@ We wanted to increase the number of users who could use the plugin without havin
 
 ---
 
-The **New** Goal
-
-Bringing Earth Engine to more QGIS users <!-- .element: class="r-fit-text" -->
-
----
-
-## What's new in this iteration?
-
-- Maintainability
-- Processing toolbox integration
-- Graphical user interfaces
+New Goal: Bring Earth Engine to more QGIS users <!-- .element: class="r-fit-text" -->
 
 ---
 
 ![Add Image GUI](assets/add-srtm-gui.png)
 
+NOTE: Main method was to leverage QGIS native tools to generate dialogs that users are used too
+
 ---
 
 ![model-builder](assets/model-builder.png)
 
----
-
-## Features
-
-- Add, filter, style:
-  - Image
-  - Image Collection
-  - Feature Collection
-- Exporting assets
-- Processing Toolbox and Model Designer Integration
-
-NOTE: Demo can be live or use screenshots/GIFs to stay lightweight
+NOTE: Using these default tools also enables integration into other tools like the processing toolbox, QGIS logging, and the Model Builder.
 
 ---
 
+TODO: make better quality
 <img src="assets/esa-world-cover.gif" alt="ESA World Cover" style="transform: scale(1.2);" />
+
+
+NOTE: Here's another example where most parameters are kept empty to use Google's smart defaults in terms of styling. 
+
+---
+
+
+## What's new?
+
+- Maintainability
+- Processing toolbox
+- Add, style, filter, and export
+
+---
+
+The plugin ecosystem is complex
+
+NOTES:
+
+- Best practices are spread out/varied
+- C++ bindings make Python API and docs integration diffcult
+- Intricacies in developing with Qt (particurlarly around signals)
+- There's few open gold standard examples or guides
+
+---
+
+Spread out best practices
+
+NOTE: 
+TODO: make lists of best resources
+
+---
+
+C++ bindings 
+
+---
+
+DevEx with Qt
+
+NOTE: particurlarly around signals
+skills gap 
+interest gap
+
+---
+ 
+Few open gold standard community examples
+
+NOTE:
+
+(of the top 20 plugins, 4 had a test suite.)
 
 ---
 
@@ -97,19 +125,15 @@ NOTE: Demo can be live or use screenshots/GIFs to stay lightweight
 
 ---
 
-![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZThrYmEyOHoxMDFidmV2YjRlNjh5emRxZm9uMnh0YTA5azNsMWJ4MyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/lPF1CyJXXcTZmUrP2J/giphy.gif)
-
----
-
 **Lesson 1: Use modern development practices** <!-- .element: class="r-fit-text" -->
 
-debugger, testing, continuous integration (CI), separate environments for testing
+debugger, testing, CI, testing env.
 
 NOTE: Give a quick node to dependency bloat and plugins being limited to 25MB
 
 ---
 
-### Some Core Tools
+### Core Tools
 
 - [pytest-qgis](https://github.com/GispoCoding/pytest-qgis/tree/main)
 - [DebugVS](https://plugins.qgis.org/plugins/debug_vs/)
@@ -121,19 +145,22 @@ NOTE: Give a quick node to dependency bloat and plugins being limited to 25MB
 
 ---
 
-<img src="assets/ci-demo.gif" alt="CI Demo" style="transform: scale(1.5);" />
+TODO: make better quality
+<img src="assets/ci-demo.gif" alt="CI Demo" style="transform: scale(1.5);" /> 
 
 ---
 
 **Lesson 2: Use `QgsProcessingAlgorithm` until you can't!** <!-- .element: class="r-fit-text" -->
 
-Built-in documentation, logging, processing toolbox and model builder integration
+docs, logs, toolbox and model builder
 
 ---
 
 `QgsProcessingAlgorithm` definition:
-- `shortHelpString` (built in docs!)
+- `shortHelpString`
 - some basic methods (`name`, `displayName`, `group`, `groupId`)
+
+NOTE: built in docs!
 
 ---
 
@@ -167,7 +194,7 @@ initAlgorithm(self, config: dict):
 
 ---
 
-QGIS has default ways of rendering each parameters <!-- .element: class="r-fit-text" -->
+Default rendering of parameters <!-- .element: class="r-fit-text" -->
 
 <span class="fragment">What if you need a complex data type?</span>  
 <span class="fragment">Or to dynamically populate data like a dropdown?</span>
@@ -176,14 +203,14 @@ NOTE: Probably the hardest and most interesting part of the development of the p
 
 ---
 
-Lesson 3: Use custom algorithm dialogs when `QgsProcessingAlgorithm` isn't enough!
+Lesson 3: Custom algorithm dialogs when `QgsProcessingAlgorithm` isn't enough
 
 ---
 
 `BaseAlgorithmDialog` structure:
 - Subclass of `QgsProcessingAlgorithmDialogBase`
-- Lets you create a custom Qt layout
-- Used for more interactive or complex parameter inputs
+- Creates a custom Qt layout
+- More interactive and nested parameter inputs
 
 ---
 
@@ -207,9 +234,11 @@ NOTE:
 ---
 
 Benefits:
-- Full control over UI elements and layout
-- Dynamically populate dropdowns (band selection, filters, available layers, etc.)
-- Embed custom widgets (percentile slider, lists of filters, etc.)
+- Full control over UI
+- Populate dropdowns 
+- Embed custom widgets 
+
+NOTE: (band selection, filters, available layers, etc.), Embed custom widgets (percentile slider, lists of filters, etc.)
 
 ---
 
@@ -224,7 +253,7 @@ Benefits:
 
 ---
 
-📘 A QGIS Plugin Dev Guide? Come say hello:
+📘 QGIS Plugin Dev Guide? Come say hello:
 
 <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://github.com/developmentseed/qgis-dev-guide/discussions/1&size=300x300" alt="QR Code" />
 
