@@ -24,4 +24,4 @@ npx reveal-md slides.md --static
 ### 📦 Deployment
 
 Slides are auto-deployed via GitHub Pages from the gh-pages branch:
-👉 https://{your-username}.github.io/qgis-uc-gee-presentation
+👉 https://developmentseed.github.io/qgis-uc-gee-presentation
