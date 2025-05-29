@@ -66,8 +66,7 @@ NOTE: Using these default tools also enables integration into other tools like t
 
 ---
 
-TODO: make better quality
-<img src="assets/esa-world-cover.gif" alt="ESA World Cover" style="transform: scale(1.2);" />
+<!-- .slide: data-background-video="assets/esa_world_cover_demo.mp4" data-background-video-loop data-background-video-muted -->
 
 
 NOTE: Here's another example where most parameters are kept empty to use Google's smart defaults in terms of styling. 
@@ -144,8 +143,7 @@ NOTE: Give a quick node to dependency bloat and plugins being limited to 25MB
 
 ---
 
-TODO: make better quality
-<img src="assets/ci-demo.gif" alt="CI Demo" style="transform: scale(1.5);" /> 
+<!-- .slide: data-background-video="assets/CI_demo.mp4" data-background-video-loop data-background-video-muted -->
 
 ---
 
@@ -267,10 +265,10 @@ NOTE: (band selection, filters, available layers, etc.), Embed custom widgets (p
 
 ### Acknowledgments
 
-- Ujaval Gandhi - Early feedback for last release
-- Gena - Initial plugin development
-- Alicia - Project management and user feedback
-- Anthony Lukach - Core Developer
+- Ujaval Gandhi: Early feedback for last release
+- Gennadii Donchyts: Initial plugin development
+- Alicia Sullivan: Project management and user feedback
+- Anthony Lukach: Core Developer
 
 ---
 
