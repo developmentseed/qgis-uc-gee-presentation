@@ -156,11 +156,15 @@ docs, logs, toolbox and model builder
 ---
 
 `QgsProcessingAlgorithm` definition:
-- <span class="fragment">`shortHelpString`</span>
-- <span class="fragment">`name`</span>
-- <span class="fragment">`displayName`</span>
-- <span class="fragment">`group`</span>
-- <span class="fragment">`groupId`</span>
+<span class="fragment">`shortHelpString`</span>
+
+<span class="fragment">`name`</span>
+
+<span class="fragment">`displayName`</span>
+
+<span class="fragment">`group`</span>
+
+<span class="fragment">`groupId`</span>
 
 NOTE: built in docs!
 
