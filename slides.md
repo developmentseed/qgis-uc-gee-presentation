@@ -74,12 +74,11 @@ NOTE: Here's another example where most parameters are kept empty to use Google'
 
 ---
 
-
 ## What's new?
 
-- Maintainability
-- Processing toolbox
 - Add, style, filter, and export
+- Processing toolbox
+- Model Builder
 
 ---
 
@@ -157,8 +156,11 @@ docs, logs, toolbox and model builder
 ---
 
 `QgsProcessingAlgorithm` definition:
-- `shortHelpString`
-- some basic methods (`name`, `displayName`, `group`, `groupId`)
+- <span class="fragment">`shortHelpString`</span>
+- <span class="fragment">`name`</span>
+- <span class="fragment">`displayName`</span>
+- <span class="fragment">`group`</span>
+- <span class="fragment">`groupId`</span>
 
 NOTE: built in docs!
 
@@ -210,7 +212,7 @@ Lesson 3: Custom algorithm dialogs when `QgsProcessingAlgorithm` isn't enough
 `BaseAlgorithmDialog` structure:
 - Subclass of `QgsProcessingAlgorithmDialogBase`
 - Creates a custom Qt layout
-- More interactive and nested parameter inputs
+- Interactive and nested parameter inputs
 
 ---
 
@@ -236,7 +238,7 @@ NOTE:
 Benefits:
 - Full control over UI
 - Populate dropdowns 
-- Embed custom widgets 
+- Custom widgets 
 
 NOTE: (band selection, filters, available layers, etc.), Embed custom widgets (percentile slider, lists of filters, etc.)
 
@@ -248,8 +250,8 @@ NOTE: (band selection, filters, available layers, etc.), Embed custom widgets (p
 
 ## What’s Next
 
-- 🔍 Earth Engine Catalog Integration
-- 💬 Listening to Users and Integrating Feedback
+- 🔍 Earth Engine Catalog
+- 💬 Listen to Users
 
 ---
 
