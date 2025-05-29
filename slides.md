@@ -84,7 +84,7 @@ NOTE: Here's another example where most parameters are kept empty to use Google'
 
 The plugin ecosystem is complex
 
-NOTES:
+NOTE:
 
 - Best practices are spread out/varied
 - C++ bindings make Python API and docs integration diffcult
