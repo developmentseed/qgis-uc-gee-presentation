@@ -21,6 +21,16 @@ Tools to improve the planet.
 
 <img src="assets/devseed-logo.png" alt="DevSeed Logo" style="height: 220px;" />
 
+<span class="fragment" style="position: absolute; bottom: 10px; right: 10px;">
+  <img src="assets/youtube_video_qr.png" alt="map behind maps Ian" style="width: 120px; height: 120px;" />
+</span>
+
+
+NOTE:
+
+Outsiders to the community though we've been involved with FOSS4G for 20 years.
+
+
 ---
 
 Goal: Bring Earth Engine to QGIS ecosystem <!-- .element: class="r-fit-text" -->
@@ -123,7 +133,7 @@ NOTE:
 
 ---
 
-**Lesson 1: Use modern development practices** <!-- .element: class="r-fit-text" -->
+**Lesson 1: Use good development practices** <!-- .element: class="r-fit-text" -->
 
 debugger, testing, CI, testing env.
 
@@ -144,6 +154,16 @@ NOTE: Give a quick node to dependency bloat and plugins being limited to 25MB
 ---
 
 <!-- .slide: data-background-video="assets/CI_demo.mp4" data-background-video-loop data-background-video-muted -->
+
+---
+
+“Legacy Code is code without tests”
+
+![Working with legacy code](assets/legacy-code.png)
+
+<span style="position: absolute; bottom: 10px; right: 10px;">
+  <img src="assets/understandlegacycode_qr.png" alt="legacy code blog" style="width: 120px; height: 120px;" />
+</span>
 
 ---
 
@@ -272,8 +292,15 @@ NOTE: (band selection, filters, available layers, etc.), Embed custom widgets (p
 
 ---
 
-## Thank you!
+<section>
 
-Try out the plugin:
+  Thank you! 
 
-<img src="https://api.qrserver.com/v1/create-qr-code/?data=https://github.com/gee-community/qgis-earthengine-plugin&size=300x300" alt="QGIS Earth Engine Plugin QR Code" />
+  <h3>Try out the plugin</h3>
+
+  <img src="assets/qgis_dev_guide_discussion_qr.png" alt="QGIS Earth Engine Plugin QR Code" style="width: 200px; height: 200px;"/>
+
+  <span class="fragment" style="position: absolute; bottom: -80px; right: -80px;">
+    <img src="assets/linkedin_qr.png" alt="LinkedIn" style="width: 175px; height: 175px;" />
+  </span>
+</section>
